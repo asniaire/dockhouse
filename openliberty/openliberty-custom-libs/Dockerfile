@@ -11,4 +11,4 @@ ADD http://central.maven.org/maven2/com/google/flogger/flogger-system-backend/0.
 ADD http://central.maven.org/maven2/org/flywaydb/flyway-core/5.2.4/flyway-core-5.2.4.jar ${SHARED_LIBS_DIR}
 
 ADD http://central.maven.org/maven2/net/wasdev/wlp/tracer/liberty-opentracing-zipkintracer/1.2/liberty-opentracing-zipkintracer-1.2-sample.zip .
-RUN unzip liberty-opentracing-zipkintracer-1.2-sample.zip -d $INSTALL_DIR/usr/
+RUN unzip liberty-opentracing-zipkintracer-1.2-sample.zip -d $INSTALL_DIR/usr/ && rm -rf liberty-opentracing-zipkintracer-1.2-sample.zip
